@@ -1,5 +1,5 @@
 # Repositorio do Projeto de POO
-Este e o meu Repositorio Principal.
+Este e o meu Repositorio do Jardim Zoologico.
 
 # Trabalho Pratico
 
