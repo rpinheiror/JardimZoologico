@@ -1,4 +1,35 @@
-﻿using System.Reflection;
+﻿extensions : .csharp
+
+# Autor: Rodrigo Henrique Silva Pinheiro
+# Data: 16/11/2025
+# Projeto: Gestão de Jardim Zoológico
+# Unidade Curricular: Programação Orientada a Objetos
+# Curso: LESI
+# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
+# Versao: Fase 1 
+
+
+extensions : .csharp
+
+# Autor: Rodrigo Henrique Silva Pinheiro
+# Data: %today%
+# Projeto: Gestão de Jardim Zoológico
+# Unidade Curricular: Programação Orientada a Objetos
+# Curso: LESI
+# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
+
+
+extensions : .csharp
+
+# Autor: Rodrigo Henrique Silva Pinheiro
+# Data: $today$
+# Projeto: Gestão de Jardim Zoológico
+# Unidade Curricular: Programação Orientada a Objetos
+# Curso: LESI
+# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
+
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

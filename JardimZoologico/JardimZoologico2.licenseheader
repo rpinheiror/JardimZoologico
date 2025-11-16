@@ -1,0 +1,12 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+extensions : .csharp
+
+# Autor: Rodrigo Henrique Silva Pinheiro
+# Data: 16/11/2025
+# Projeto: Gestão de Jardim Zoológico
+# Unidade Curricular: Programação Orientada a Objetos
+# Curso: LESI
+# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
+# Versao: Fase 1 
+
