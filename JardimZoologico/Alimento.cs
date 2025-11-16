@@ -1,4 +1,6 @@
-﻿extensions : .csharp
+﻿using System;
+
+extensions : .csharp
 
 # Autor: Rodrigo Henrique Silva Pinheiro
 # Data: 16/11/2025
@@ -16,6 +18,9 @@ using System.Threading.Tasks;
 
 namespace JardimZoologico
 {
+    /// <summary>
+    /// Representa o ato de alimentar um animal no zoológico.
+    /// </summary>
     public class Alimento : Comida
     {
         #region Fields
@@ -36,6 +41,15 @@ namespace JardimZoologico
         }
         #endregion 
 
+        /// <summary>
+        /// Construtor da classe Alimento que inicia o nome do animal, data servido, comida
+        /// </summary>
+        /// <param name="NomeAnimal"></param>
+        /// <param name="DataServido"></param>
+        /// <param name="IdComida"></param>
+        /// <param name="Quantidade"></param>
+        /// <param name="TipoComida"></param>
+        /// <param name="DataValidade"></param>
         #region Constructors
         public Alimento(string NomeAnimal, DateTime DataServido, : base int IdComida, double Quantidade, string TipoComida, DateTime DataValidade)
         {
@@ -46,10 +60,14 @@ namespace JardimZoologico
             this.Tipo = TipoComida;
             this.DataValidade = DataValidade;
         }
-        #endregion 
+        #endregion
 
         #region Methods
-        public abstract bool ServirAlimento();
+        /// <summary>
+        /// Método abstrato para servir alimento ao animal.
+        /// </summary>
+        /// <returns>Retorna true se o alimento foi servido com sucesso, caso contrário, false.</returns>
+        public abstract bool ServirAlimento(); 
         #endregion
     }
 

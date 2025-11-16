@@ -46,7 +46,6 @@
     <Compile Include="Alimento.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Comida.cs" />
-    <Compile Include="Cuidador.cs" />
     <Compile Include="Espetaculo.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Jaula.cs" />

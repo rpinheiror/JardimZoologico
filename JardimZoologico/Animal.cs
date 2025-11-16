@@ -18,7 +18,10 @@ using System.Threading.Tasks;
 
 namespace JardimZoologico
 {
-    public class Animal
+    /// <summary>
+    /// Classe Animal que representa um animal no jardim zoológico
+    /// </summary>
+    public class Animal 
     {
         #region Fields
         private int IdAnimal;
@@ -28,7 +31,7 @@ namespace JardimZoologico
         #endregion
 
         #region Properties
-        public int Id
+        public int Idint
         {
             get { return IdAnimal; }
             set { IdAnimal = value; }
@@ -48,10 +51,17 @@ namespace JardimZoologico
             get { return IdadeAnimal; }
             set { IdadeAnimal = value; }
         }
-        #endregion 
+        #endregion
 
         #region Constructors
 
+        /// <summary>
+        /// Construtor da classe Animal
+        /// </summary>
+        /// <param name="IdAnimal"></param>
+        /// <param name="NomeAnimal"></param>
+        /// <param name="EspecieAnimal"></param>
+        /// <param name="IdadeAnimal"></param>
         public Animal(int IdAnimal, string NomeAnimal, string EspecieAnimal, int IdadeAnimal)
         {
             this.IdAnimal = IdadeAnimal;

@@ -20,7 +20,6 @@ namespace JardimZoologico
     {
         #region Fields
         private int IdJaula;
-        private string NomeJaula;
         private string TipoJaula;
         private string Localizacao;
         #endregion
@@ -30,11 +29,6 @@ namespace JardimZoologico
         {
             get { return IdJaula; }
             set { IdJaula = value; }
-        }
-        public string NomeJaula
-        {
-            get { return NomeJaula; }
-            set { NomeJaula = value; }
         }
         public string TipoJaula
         {
@@ -50,10 +44,9 @@ namespace JardimZoologico
 
 
         #region Constructors
-        public Jaula(int IdJaula, string NomeJaula, string TipoJaula, string Localizacao)
+        public Jaula(int IdJaula, string TipoJaula, string Localizacao)
         {
             this.IdJaula = IdJaula;
-            this.NomeJaula = NomeJaula;
             this.TipoJaula = TipoJaula;
             this.Localizacao = Localizacao;
         }

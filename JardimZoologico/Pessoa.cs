@@ -19,14 +19,14 @@ namespace JardimZoologico
     public class Pessoa
     {
         #region Fields
-        private int NIF;
+        private string Nif;
         private string Morada;
         private string NomePessoa;
         private int IdadePessoa;
         #endregion 
 
         #region Properties
-        public int NIF
+        public const NIF = 9;
         {
             get { return NIF; }
             set { NIF = value; }
@@ -50,11 +50,11 @@ namespace JardimZoologico
         #endregion 
 
         #region Contructor
-        public Pessoa(string NomePessoa, int IdadePessoa, int nif, string morada)
+        public Pessoa(string NomePessoa, int IdadePessoa, string Nif, string morada)
         {
             this.NomePessoa = NomePessoa;
             this.IdadePessoa = IdadePessoa;
-            this.NIF = nif;
+            this.Nif = Nif;
             this.Morada = morada;
         }
         #endregion 
