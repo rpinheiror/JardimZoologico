@@ -1,12 +1,13 @@
-﻿extensions : .csharp
-
-# Autor: Rodrigo Henrique Silva Pinheiro
-# Data: 16/11/2025
-# Projeto: Gestão de Jardim Zoológico
-# Unidade Curricular: Programação Orientada a Objetos
-# Curso: LESI
-# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
-# Versao: Fase 1 
+﻿// -----------------------------------------------------------------
+// Autor: Rodrigo Henrique Silva Pinheiro
+// Número: 31502
+// Data: 16/11/2025
+// Projeto: Gestão de Jardim Zoológico
+// Unidade Curricular: Programação Orientada a Objetos
+// Curso: LESI
+// Instituição: Instituto Politécnico do Cávado e do Ave (IPCA)
+// Versão: Fase 1
+// -----------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
@@ -25,18 +26,19 @@ namespace JardimZoologico
         #endregion
 
         #region Properties
-        public int IdJaula
+        public int Id
         {
             get { return IdJaula; }
             set { IdJaula = value; }
         }
-        public string TipoJaula
+        public string TPJaula
         {
             get { return TipoJaula; }
             set { TipoJaula = value; }
         }
-        public string Localizacao
+        public string LocalJaula
         {
+          
             get { return Localizacao; }
             set { Localizacao = value; }
         }
@@ -44,11 +46,11 @@ namespace JardimZoologico
 
 
         #region Constructors
-        public Jaula(int IdJaula, string TipoJaula, string Localizacao)
+        public Jaula(int id, string tpJaula, string localizacao)
         {
-            this.IdJaula = IdJaula;
-            this.TipoJaula = TipoJaula;
-            this.Localizacao = Localizacao;
+            this.IdJaula = id;
+            this.TipoJaula = tpJaula;
+            this.Localizacao = localizacao;
         }
         #endregion
 

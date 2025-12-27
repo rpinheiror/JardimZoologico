@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="JardimZoologico.csproj" Id="91ee111f-7733-48b7-b568-44d485e069fd" />
+  <Project Path="../BO/BO.csproj" Id="fc5fc7b6-c535-47ad-8f5e-a84d911562ea" />
+  <Project Path="../Dados/Dados.csproj" Id="105d8236-afb8-4ed3-913e-42341c445842" />
+  <Project Path="../Exceptions/Exceptions.csproj" Id="6746f0c5-162f-4cc6-81ab-ff20015883a1" />
+  <Project Path="../GestaoZoologico/GestaoZoologico.csproj" Id="31d354a5-e3cf-4fa9-b87f-258e9fbfbdaa" />
+  <Project Path="../MAIN/MAIN.csproj" Id="cd2c8340-052e-4417-b991-549c4a69bd21" />
 </Solution>

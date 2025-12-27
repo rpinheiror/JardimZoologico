@@ -1,13 +1,13 @@
-﻿extensions : .csharp
-
-# Autor: Rodrigo Henrique Silva Pinheiro
-# Data: 16/11/2025
-# Projeto: Gestão de Jardim Zoológico
-# Unidade Curricular: Programação Orientada a Objetos
-# Curso: LESI
-# Instituição: Instituto Politecnico Do Cavado e DO Ave (IPCA)
-# Versao: Fase 1 
-
+﻿// -----------------------------------------------------------------
+// Autor: Rodrigo Henrique Silva Pinheiro
+// Número: 31502
+// Data: 16/11/2025
+// Projeto: Gestão de Jardim Zoológico
+// Unidade Curricular: Programação Orientada a Objetos
+// Curso: LESI
+// Instituição: Instituto Politécnico do Cávado e do Ave (IPCA)
+// Versão: Fase 1
+// -----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,35 +28,35 @@ namespace JardimZoologico
         #endregion
 
         #region Properties 
-        public int IdComida
+        public int Id
         {
             get { return IdComida; }
             set { IdComida = value; }
         }
-        public double Quantidade
+        public double QuantidadeComida
         {
             get { return Quantidade; }
             set { Quantidade = value; }
         }
-        public string TipoComida
+        public string TPcomida
         {
             get { return TipoComida; }
             set { TipoComida = value; }
         }
-        public DateTime DataValidade
+        public DateTime DATAVAL
         {
-            get { return DataValidade }
-            set{ DataValidade = value; }
+            get { return DataValidade; }
+            set { DataValidade = value; }
         }
         #endregion 
 
         #region Constructors
-        public Comida(int IdComida, double Quantidade, string TipoComida, DateTime DataValidade)
+        public Comida(int id, double quantidade, string tipo, DateTime data)
         {
-            this.IdComida = IdComida;
-            this.Quantidade = Quantidade;
-            this.TipoComida = TipoComida;
-            this.DataValidade = DataValidade;
+            this.IdComida = id;
+            this.Quantidade = quantidade;
+            this.TipoComida = tipo;
+            this.DataValidade = data;
         }
         #endregion
 
