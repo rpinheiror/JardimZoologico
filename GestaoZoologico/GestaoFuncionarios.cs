@@ -9,26 +9,36 @@ namespace GestaoZoologico
     public class GestaoFuncionarios
     {
         // Lista genérica que aceita qualquer tipo de funcionário (Polimorfismo)
-        private List<Funcionario> _listaFuncionarios;
+        private List<Funcionario> listaFuncionarios;
 
         public GestaoFuncionarios()
         {
-            _listaFuncionarios = new List<Funcionario>();
+            listaFuncionarios = new List<Funcionario>();
         }
 
-        public void AdicionarFuncionario(Funcionario f)
+        public bool AdicionarFuncionario(Funcionario f)
         {
-            // Aqui podes usar as tuas Exceções Customizadas se o ID já existir
-            _listaFuncionarios.Add(f);
+            if (f == null ) return false;
+            listaFuncionarios.Add(f);
+            return true;
         }
 
-        public void ListarTodos()
+        public List<Funcionario> RetornaListaFuncionarios()
         {
-            foreach (var f in _listaFuncionarios)
+            return listaFuncionarios;
+        }
+
+        public bool RemoverFuncionario(int idfuncionario)
+        {
+            
+            Funcionario f = listaFuncionarios.Find(x => x.IDFuncionario == idfuncionario);
+
+            if (f != null)
             {
-                // Graças ao override do ToString, isto imprimirá os dados certos
-                Console.WriteLine(f.ToString());
+                listaFuncionarios.Remove(f);
+                return true; 
             }
+            return false; 
         }
     }
 }

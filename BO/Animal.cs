@@ -36,13 +36,6 @@ namespace JardimZoologico
 
         #region Constructors
 
-        /// <summary>
-        /// Construtor da classe Animal
-        /// </summary>
-        /// <param name="IdAnimal"></param>
-        /// <param name="NomeAnimal"></param>
-        /// <param name="EspecieAnimal"></param>
-        /// <param name="IdadeAnimal"></param>
         public Animal(int idAnimal, string especieAnimal)
         {
             this.IdAnimal = idAnimal;

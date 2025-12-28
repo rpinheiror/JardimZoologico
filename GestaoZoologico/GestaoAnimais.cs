@@ -9,28 +9,44 @@ namespace GestaoZoologico
 {
     public class GestaoAnimais
     {
-        // Encapsulamento: a lista é privada para não ser alterada de fora sem controlo
-        private List<Animal> _listaAnimais;
+        
+        private List<Animal> ListaAnimais;
 
         public GestaoAnimais()
         {
-            _listaAnimais = new List<Animal>();
+            ListaAnimais = new List<Animal>();
         }
 
-        // Método para adicionar (Regra de Negócio)
+        
         public bool AdicionarAnimal(Animal a)
         {
-            if (a == null) return false;
+            if (a == null) 
+            return false;
 
-            // Aqui podes verificar se o ID já existe antes de adicionar
-            _listaAnimais.Add(a);
+            if (ListaAnimais.Any(animal => animal.IddoAnimal == a.IddoAnimal)) 
+            return false;
+
+            else
+                ListaAnimais.Add(a);
             return true;
         }
 
-        // Método para listar (Útil para a aplicação demonstradora da Fase 2)
-        public List<Animal> GetTodosAnimais()
+        
+        public List<Animal> RetornaListaAnimais() 
         {
-            return _listaAnimais;
+            return ListaAnimais;
+        }
+
+        public bool RemoverAnimal(int idanimal)
+        {
+            Animal a = ListaAnimais.Find(animal => animal.IddoAnimal == idanimal);
+
+            if (a != null)
+            {
+                ListaAnimais.Remove(a);
+                return true;
+            }
+            return false;
         }
     }
 }
