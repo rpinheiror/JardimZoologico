@@ -6,7 +6,6 @@
 // Unidade Curricular: Programação Orientada a Objetos
 // Curso: LESI
 // Instituição: Instituto Politécnico do Cávado e do Ave (IPCA)
-// Versão: Fase 1
 // -----------------------------------------------------------------
 
 using System;
@@ -15,8 +14,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JardimZoologico
+namespace BO
 {
+    [Serializable]
     public class Veterinario : Pessoa
    
     {
@@ -47,14 +47,6 @@ namespace JardimZoologico
         #endregion
 
         #region Methods
-        public void RealizarConsulta()
-        {
-            // Lógica para realizar consulta veterinária
-        }
-        public void AdministrarVacina()
-        {
-            // Lógica para administrar vacina
-        }
         #endregion
     }
 }

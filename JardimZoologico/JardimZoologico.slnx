@@ -1,7 +1,8 @@
 <Solution>
   <Project Path="../BO/BO.csproj" Id="fc5fc7b6-c535-47ad-8f5e-a84d911562ea" />
-  <Project Path="../Dados/Dados.csproj" Id="105d8236-afb8-4ed3-913e-42341c445842" />
   <Project Path="../Exceptions/Exceptions.csproj" Id="6746f0c5-162f-4cc6-81ab-ff20015883a1" />
   <Project Path="../GestaoZoologico/GestaoZoologico.csproj" Id="31d354a5-e3cf-4fa9-b87f-258e9fbfbdaa" />
   <Project Path="../MAIN/MAIN.csproj" Id="cd2c8340-052e-4417-b991-549c4a69bd21" />
+  <Project Path="Dados/Dados.csproj" Id="f4c91179-9799-4f58-af88-1c4bcab8c33d" />
+  <Project Path="Regras/Regras.csproj" Id="9e292644-a43b-4d82-bce4-4e1ccfe485b5" />
 </Solution>

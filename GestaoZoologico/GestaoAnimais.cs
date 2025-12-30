@@ -1,43 +1,30 @@
-﻿using BO; // Usar Business Object para aceder aos dados dos Animais
-using JardimZoologico;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Generic;
 using System.Text;
+using Dados;
+using BO; // Usar Business Object para aceder aos dados dos Animais
 
 namespace GestaoZoologico
 {
     public class GestaoAnimais
     {
-        
-        private List<Animal> ListaAnimais;
+   
 
-        public GestaoAnimais()
+        #region Methods
+        public static bool AdicionarAnimal(Animal a, List<Animal> ListaAnimais)
         {
-            ListaAnimais = new List<Animal>();
-        }
+            if (a == null) // Verifica se o animal nao é nulo
+                return false;
 
-        
-        public bool AdicionarAnimal(Animal a)
-        {
-            if (a == null) 
-            return false;
-
-            if (ListaAnimais.Any(animal => animal.IddoAnimal == a.IddoAnimal)) 
-            return false;
+            if (ListaAnimais.Any(animal => animal.IddoAnimal == a.IddoAnimal))  // Verifica se o animal já existe na lista
+                return false;
 
             else
-                ListaAnimais.Add(a);
+                ListaAnimais.Add(a); // Adiciona o animal à lista
             return true;
         }
-
-        
-        public List<Animal> RetornaListaAnimais() 
-        {
-            return ListaAnimais;
-        }
-
-        public bool RemoverAnimal(int idanimal)
+        public static bool RemoverAnimal(int idanimal, List<Animal> ListaAnimais)
         {
             Animal a = ListaAnimais.Find(animal => animal.IddoAnimal == idanimal);
 
@@ -48,5 +35,7 @@ namespace GestaoZoologico
             }
             return false;
         }
+        #endregion
+
     }
 }

@@ -15,36 +15,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JardimZoologico
+namespace BO;
+
+[Serializable]
+public abstract class Funcionario : Pessoa
 {
-    public abstract class Funcionario : Pessoa
+    #region Fields
+    private int IdFuncionario;
+    private string Cargo;
+    #endregion
+
+    #region Properties 
+    public int IDFuncionario
     {
-        #region Fields
-        private int IdFuncionario;
-        private string Cargo;
-        #endregion
-
-        #region Properties 
-        public int IDFuncionario
-        {
-            get { return IdFuncionario; }
-            set { IdFuncionario = value; }
-        }
-
-        public string CargoFuncionario
-        {
-            get { return Cargo; }
-            set { Cargo = value; }
-        }
-        #endregion
-
-        #region Constructors
-        protected Funcionario(int id, string cargo, string nome, int idade, string nif, string morada): base(nome, idade, nif, morada)
-        {
-            this.IdFuncionario = id;
-            this.Cargo = cargo;
-        }
-
-        #endregion
+        get { return IdFuncionario; }
+        set { IdFuncionario = value; }
     }
+
+    public string CargoFuncionario
+    {
+        get { return Cargo; }
+        set { Cargo = value; }
+    }
+    #endregion
+
+    #region Constructors
+    protected Funcionario(int id, string cargo, string nome, int idade, string nif, string morada): base(nome, idade, nif, morada)
+    {
+        this.IdFuncionario = id;
+        this.Cargo = cargo;
+    }
+
+    #endregion
 }

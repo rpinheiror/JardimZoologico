@@ -15,8 +15,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JardimZoologico
+namespace BO
 {
+    [Serializable]
     public class Pessoa
     {
         #region Fields
@@ -30,7 +31,7 @@ namespace JardimZoologico
         public string NumeroNIF
         {
             get { return Nif; }
-            set { Nif = value; }
+            set { if (value.Length == 9) Nif = value; }
         }
         public string PessoaMorada
         {
@@ -39,8 +40,8 @@ namespace JardimZoologico
         }
         public string NomeCompleto
         {
-            get { return NomeCompleto; }
-            set { NomeCompleto = value; }
+            get { return NomePessoa; } 
+            set { NomePessoa = value; } 
         }
 
         public int IdadePessoa

@@ -16,8 +16,9 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JardimZoologico
+namespace BO
 {
+    [Serializable]
     public class Comida
     {
         #region Fields
@@ -28,7 +29,7 @@ namespace JardimZoologico
         #endregion
 
         #region Properties 
-        public int Id
+        public int IddaComida
         {
             get { return IdComida; }
             set { IdComida = value; }
@@ -61,10 +62,6 @@ namespace JardimZoologico
         #endregion
 
         #region Methods
-        public bool DentroValidade()
-        {
-            return DateTime.Now <= DataValidade;
-        }
         #endregion
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Dados
+﻿namespace Regras
 {
     public class Class1
     {

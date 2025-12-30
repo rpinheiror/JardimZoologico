@@ -1,10 +1,10 @@
-﻿using JardimZoologico;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BO
 {
+    [Serializable]
     public class Tratador : Funcionario
     {
         #region Fields

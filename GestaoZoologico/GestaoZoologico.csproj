@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BO\BO.csproj" />
+    <ProjectReference Include="..\JardimZoologico\Dados\Dados.csproj" />
+    <ProjectReference Include="..\JardimZoologico\Dados\Dados.csproj" />
   </ItemGroup>
 
 </Project>

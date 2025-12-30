@@ -8,12 +8,10 @@
 // Instituição: Instituto Politécnico do Cávado e do Ave (IPCA)
 // Versão: Fase 1
 // -----------------------------------------------------------------
-
-namespace JardimZoologico
+namespace BO
 {
-    /// <summary>
-    /// Classe Animal que representa um animal no jardim zoológico
-    /// </summary>
+    [Serializable]
+
     public class Animal 
     {
         #region Fields
