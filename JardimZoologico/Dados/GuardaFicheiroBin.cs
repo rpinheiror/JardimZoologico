@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GestaoZoologico;
 using System.IO; // Para operacoes de input e output
 using System.Runtime.Serialization.Formatters.Binary; // Para poder utilizar ficheiros binarios
+using BO;
 
 namespace Dados
 {

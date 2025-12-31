@@ -12,18 +12,25 @@ namespace Dados
         private static List<Animal> ListaAnimais;
         #endregion
 
-        #region Constructors
-        // Fix: Constructor name must match class name
-        public DadosAnimais()
+        #region Properties
+        public static List<Animal> _ListaAnimais
         {
-            ListaAnimais = new List<Animal>();
+            get { return ListaAnimais; }
+            set { ListaAnimais = value; }
+        }
+        #endregion
+
+        #region Constructors
+        static DadosAnimais()
+        {
+            _ListaAnimais = new List<Animal>();
         }
         #endregion
 
         #region Methods
-        public List<Animal> RetornaListaAnimais()
+        public static List<Animal> RetornaListaAnimais()
         {
-            return ListaAnimais;
+            return _ListaAnimais;
         }
         #endregion
     }

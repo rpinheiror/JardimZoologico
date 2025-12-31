@@ -8,13 +8,28 @@ namespace Dados
     internal class DadosComida
     {
         #region FIELDS
-        private  List<Comida> ListaComida;
+        private static List<Comida> listaComida;
+        #endregion
+
+        #region PROPERTIES
+        public static List<Comida> _listaComida
+        {
+            get { return listaComida; }
+            set { listaComida = value; }
+        }
         #endregion
 
         #region CONSTRUCTORS
-        public DadosComida()
+        static DadosComida()
         {
-            ListaComida = new List<Comida>();
+            _listaComida = new List<Comida>();
+        }
+        #endregion
+
+        #region METHODS
+        public static List<Comida> RetornaListaComida()
+        {
+            return _listaComida;
         }
         #endregion
     }

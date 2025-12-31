@@ -11,39 +11,39 @@ namespace GestaoZoologico
     {
 
         #region Methods
-        public bool AdicionarComida(List<Comida> ListaComida, Comida c)
+        public bool AdicionarComida(List<Comida> _listaComida, Comida c)
         {
             if (c == null) // Verifica se a comida nao é nula
                 return false;
 
-            if (ListaComida.Any(comida => comida.IddaComida == c.IddaComida))  // Verifica se a comida já existe na lista
+            if (_listaComida.Any(comida => comida.IddaComida == c.IddaComida))  // Verifica se a comida já existe na lista
                 return false;
 
             else
-                ListaComida.Add(c); // Adiciona a comida à lista
+                _listaComida.Add(c); // Adiciona a comida à lista
             return true;
         }
 
-        public static bool RemoverComida(List<Comida> listaComida, int idcomida)
+        public static bool RemoverComida(List<Comida> _listaComida, int idcomida)
         {
-            Comida c = listaComida.Find(comida => comida.IddaComida == idcomida);
+            Comida c = _listaComida.Find(comida => comida.IddaComida == idcomida);
 
             if (c != null)
             {
-                listaComida.Remove(c);
+                _listaComida.Remove(c);
                 return true;
             }
             return false;
         }
 
-        public  Comida ObterComidaPorId(List<Comida> ListaComida,int idcomida)
+        public  Comida ObterComidaPorId(List<Comida> _listaComida, int idcomida)
         {
-            return ListaComida.Find(comida => comida.IddaComida == idcomida);
+            return _listaComida.Find(comida => comida.IddaComida == idcomida);
         }
 
-        public int QuantidadeTotalComidaPorTipo(List<Comida> ListaComida, string tipo)
+        public int QuantidadeTotalComidaPorTipo(List<Comida> _listaComida, string tipo)
         {
-            return ListaComida.Where(comida => comida.TPcomida == tipo)
+            return _listaComida.Where(comida => comida.TPcomida == tipo)
                               .Sum(comida => (int)comida.QuantidadeComida);
         }
         #endregion

@@ -9,41 +9,25 @@ namespace GestaoZoologico
 {
     internal class GestaoJaulas
     {
-        #region Fields
-        private List<Jaula> listaJaulas;
-        #endregion
-
-        #region Constructors
-        public GestaoJaulas()
-        {
-            listaJaulas = new List<Jaula>();
-        }
-        #endregion
-
         #region Methods 
-        public bool AdicionarJaula(Jaula j)
+        public bool AdicionarJaula(Jaula j, List<Jaula> _listaJaulas)
         {
             if (j == null) return false;
 
-            if (listaJaulas.Any(jaula => jaula.IddaJaula == j.IddaJaula))  // Verifica se a jaula já existe na lista
+            if (_listaJaulas.Any(jaula => jaula.IddaJaula == j.IddaJaula))  // Verifica se a jaula já existe na lista
                 return false;
 
-            listaJaulas.Add(j);
+            _listaJaulas.Add(j);
             return true;
         }
 
-        public List<Jaula> RetornaListaJaulas()
+        public bool RemoverJaula(int idJaula, List<Jaula> _listaJaulas)
         {
-            return listaJaulas;
-        }
-
-        public bool RemoverJaula(int idJaula)
-        {
-            Jaula j = listaJaulas.Find(x => x.IddaJaula == idJaula);
+            Jaula j = _listaJaulas.Find(x => x.IddaJaula == idJaula);
 
             if (j != null)
             {
-                listaJaulas.Remove(j);
+                _listaJaulas.Remove(j);
                 return true;
             }
             return false;

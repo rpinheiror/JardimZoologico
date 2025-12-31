@@ -12,25 +12,25 @@ namespace GestaoZoologico
    
 
         #region Methods
-        public static bool AdicionarAnimal(Animal a, List<Animal> ListaAnimais)
+        public static bool AdicionarAnimal(Animal a, List<Animal> _ListaAnimais)
         {
             if (a == null) // Verifica se o animal nao é nulo
                 return false;
 
-            if (ListaAnimais.Any(animal => animal.IddoAnimal == a.IddoAnimal))  // Verifica se o animal já existe na lista
+            if (_ListaAnimais.Any(animal => animal.IddoAnimal == a.IddoAnimal))  // Verifica se o animal já existe na lista
                 return false;
 
             else
-                ListaAnimais.Add(a); // Adiciona o animal à lista
+                _ListaAnimais.Add(a); // Adiciona o animal à lista
             return true;
         }
-        public static bool RemoverAnimal(int idanimal, List<Animal> ListaAnimais)
+        public static bool RemoverAnimal(int idanimal, List<Animal> _ListaAnimais)
         {
-            Animal a = ListaAnimais.Find(animal => animal.IddoAnimal == idanimal);
+            Animal a = _ListaAnimais.Find(animal => animal.IddoAnimal == idanimal);
 
             if (a != null)
             {
-                ListaAnimais.Remove(a);
+                _ListaAnimais.Remove(a);
                 return true;
             }
             return false;

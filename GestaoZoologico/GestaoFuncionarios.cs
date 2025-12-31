@@ -8,42 +8,27 @@ namespace GestaoZoologico
 {
     public class GestaoFuncionarios
     {
-        #region Fields
-        private List<Funcionario> listaFuncionarios;
-        #endregion
-
-        #region Constructors
-        public GestaoFuncionarios()
-        {
-            listaFuncionarios = new List<Funcionario>();
-        }
-        #endregion
-
+       
         #region Methods
-        public bool AdicionarFuncionario(Funcionario f)
+        public bool AdicionarFuncionario(Funcionario f, List<Funcionario> _listaFuncionarios)
         {
             if (f == null ) return false; // Verifica se o funcionario é nulo
 
-            if (listaFuncionarios.Any(funcionario => funcionario.IDFuncionario == f.IDFuncionario))  // Verifica se o funcionario já existe na lista
+            if (_listaFuncionarios.Any(funcionario => funcionario.IDFuncionario == f.IDFuncionario))  // Verifica se o funcionario já existe na lista
             return false;
 
-            listaFuncionarios.Add(f); // Adiciona o funcionario à lista
+            _listaFuncionarios.Add(f); // Adiciona o funcionario à lista
             return true;
         }
 
-        public List<Funcionario> RetornaListaFuncionarios()
-        {
-            return listaFuncionarios;
-        }
-
-        public bool RemoverFuncionario(int IDFuncionario)
+        public bool RemoverFuncionario(int IDFuncionario, List<Funcionario> _listaFuncionarios)
         {
             
-            Funcionario f = listaFuncionarios.Find(x => x.IDFuncionario == IDFuncionario);
+            Funcionario f = _listaFuncionarios.Find(x => x.IDFuncionario == IDFuncionario);
 
             if (f != null)
             {
-                listaFuncionarios.Remove(f);
+                _listaFuncionarios.Remove(f);
                 return true; 
             }
             return false; 
